@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5u1j6filn4mp"]
+
+[ext_resource type="Texture2D" uid="uid://3cki8sp6212e" path="res://icon.svg" id="1_l0xhu"]
+[ext_resource type="Script" path="res://home/MenuButton.cs" id="2_pybjo"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_2740n"]
+script/source = "using Godot;
+using System;
+
+public partial class Home : Node2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+	
+}
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("CSharpScript_2740n")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-1, -8)
+texture = ExtResource("1_l0xhu")
+
+[node name="MenuButton" type="MenuButton" parent="Icon"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -29.0
+offset_top = 4.0
+offset_right = -97.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_pybjo")
+
+[node name="Camera2D" type="Camera2D" parent="."]

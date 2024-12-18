@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Home : Node2D
+public partial class SkillButton : MenuButton
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -12,5 +12,4 @@ public partial class Home : Node2D
 	public override void _Process(double delta)
 	{
 	}
-	
 }

@@ -1,21 +1,26 @@
 using Godot;
 using System;
 
-public partial class MenuButton : Godot.MenuButton
+public partial class menu : Button
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		var button = new Button();
-   	button.Text = "Click me";
-	button.Pressed += ButtonPressed;
+   	button.Text = "Exit";
+	button.Pressed += ExitPressed;
 	AddChild(button);
+	
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		
 	}
-	private void ButtonPressed(){
-	GD.Print("heyyy");}
+	public void ExitPressed()
+	{
+	GetTree().ChangeSceneToFile("res://home/home.tscn");
+	}
+	
 }

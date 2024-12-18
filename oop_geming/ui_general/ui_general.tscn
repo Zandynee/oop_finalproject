@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dki11xovttedh"]
+
+[ext_resource type="Script" path="res://ui_general/menu.cs" id="1_q85bl"]
+[ext_resource type="Script" path="res://ui_general/SkillButton.cs" id="2_8ixe0"]
+
+[node name="ui_general" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Button" type="Button" parent="Camera2D"]
+offset_left = -572.0
+offset_top = -319.0
+offset_right = -464.0
+offset_bottom = -266.0
+script = ExtResource("1_q85bl")
+
+[node name="MenuButton" type="MenuButton" parent="."]
+offset_left = 25.0
+offset_top = 180.0
+offset_right = 217.0
+offset_bottom = 316.0
+script = ExtResource("2_8ixe0")
