@@ -29,19 +29,20 @@ script = SubResource("CSharpScript_2740n")
 [node name="Database" parent="." instance=ExtResource("1_h7ecs")]
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(-1, -8)
+position = Vector2(3, -162)
 texture = ExtResource("1_l0xhu")
 
 [node name="MenuButton" type="MenuButton" parent="Icon"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -29.0
-offset_top = 4.0
-offset_right = -97.0
-offset_bottom = -116.0
+offset_left = -39.0422
+offset_top = 137.984
+offset_right = -107.042
+offset_bottom = 40.9844
 grow_horizontal = 2
 grow_vertical = 2
+text = "MENU"
 script = ExtResource("2_pybjo")
 
 [node name="Camera2D" type="Camera2D" parent="."]

@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://blrxorkds0jjf"]
+[gd_scene load_steps=4 format=3 uid="uid://blrxorkds0jjf"]
 
+[ext_resource type="Script" path="res://database/enemy1.cs" id="1_3vil7"]
 [ext_resource type="Texture2D" uid="uid://3cki8sp6212e" path="res://icon.svg" id="1_7liqn"]
+[ext_resource type="Script" path="res://enemy1/progresbar.cs" id="3_akk7n"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Enemy1" type="Node2D"]
+script = ExtResource("1_3vil7")
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(1, -1)
@@ -13,3 +16,18 @@ offset_left = -16.0
 offset_top = -79.0
 offset_right = 24.0
 offset_bottom = -39.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -15.7734
+offset_top = 48.2878
+offset_right = 24.2266
+offset_bottom = 88.2878
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+value = 100.0
+script = ExtResource("3_akk7n")

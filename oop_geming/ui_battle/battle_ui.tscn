@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3f7lornx5i8n"]
+
+[ext_resource type="Script" path="res://ui_battle/ui_battle.cs" id="1_g7cq3"]
+[ext_resource type="PackedScene" uid="uid://dtjn3hqunsiv0" path="res://gameplay.tscn" id="2_jrcvw"]
+[ext_resource type="Script" path="res://ui_battle/attack.cs" id="2_jwklu"]
+[ext_resource type="Script" path="res://ui_battle/skill1.cs" id="4_fr047"]
+[ext_resource type="PackedScene" uid="uid://dki11xovttedh" path="res://ui_general/ui_general.tscn" id="5_ychxt"]
+[ext_resource type="Script" path="res://ui_battle/skip.cs" id="6_e5nht"]
+
+[node name="BattleUi" type="Node2D"]
+script = ExtResource("1_g7cq3")
+
+[node name="Attack" type="Button" parent="."]
+offset_left = -30.9809
+offset_top = 162.179
+offset_right = 50.0191
+offset_bottom = 205.179
+text = "Attack!"
+script = ExtResource("2_jwklu")
+
+[node name="Gameplay" parent="." instance=ExtResource("2_jrcvw")]
+position = Vector2(-547, -377)
+
+[node name="Defend" type="Button" parent="."]
+offset_left = 69.4283
+offset_top = 156.522
+offset_right = 77.4283
+offset_bottom = 164.522
+scale = Vector2(2.24999, 1.66667)
+text = "Defend"
+script = ExtResource("4_fr047")
+
+[node name="ui_general" parent="." instance=ExtResource("5_ychxt")]
+position = Vector2(28, -54)
+
+[node name="Skip" type="Button" parent="."]
+offset_left = 405.462
+offset_top = 142.296
+offset_right = 447.462
+offset_bottom = 173.296
+text = "SKip"
+script = ExtResource("6_e5nht")
