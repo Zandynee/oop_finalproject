@@ -5,6 +5,7 @@ public partial class player : Node
 {
 	public int MaxHp = 10;
 	public int Defend = 0 ;
+	public int Buff = 1;
 	public int Hp { get; private set; }
 	public override void _Ready()
 	{
@@ -21,13 +22,26 @@ public partial class player : Node
 	}
 	public int TakeGuard(int amount)
 	{
-		Defend = amount;
+		Defend = amount*Buff;
 		Defend = Math.Max(Defend, 0);
 		return Defend;
 	}
-	public void StatReset()
+	public int TakeBuff(int amount)
+	{
+		Buff = amount;
+		GD.Print("You Buffed!");
+		Buff = Math.Max(Buff, 0);
+		return Buff;
+		
+	}
+	public void StatReset(int buff_duration)
 	{
 		TakeGuard(0);
+		if(buff_duration ==0)
+		{
+			GD.Print("Player Buff is gone...");
+			TakeBuff(1);
+		}
 	}
 	
 	

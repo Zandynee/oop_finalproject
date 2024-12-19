@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://blrxorkds0jjf"]
 
-[ext_resource type="Script" path="res://database/enemy1.cs" id="1_3vil7"]
+[ext_resource type="Script" path="res://datademo/enemy1.cs" id="1_3vil7"]
 [ext_resource type="Texture2D" uid="uid://3cki8sp6212e" path="res://icon.svg" id="1_7liqn"]
 [ext_resource type="Script" path="res://enemy1/progresbar.cs" id="3_akk7n"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://s57glgyuga6i"]
 
 [ext_resource type="Texture2D" uid="uid://3cki8sp6212e" path="res://icon.svg" id="1_f7omb"]
-[ext_resource type="Script" path="res://database/player.cs" id="1_myk57"]
+[ext_resource type="Script" path="res://datademo/player.cs" id="1_myk57"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_myk57")

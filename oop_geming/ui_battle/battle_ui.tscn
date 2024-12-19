@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3f7lornx5i8n"]
+[gd_scene load_steps=8 format=3 uid="uid://d3f7lornx5i8n"]
 
 [ext_resource type="Script" path="res://ui_battle/ui_battle.cs" id="1_g7cq3"]
 [ext_resource type="PackedScene" uid="uid://dtjn3hqunsiv0" path="res://gameplay.tscn" id="2_jrcvw"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://ui_battle/skill1.cs" id="4_fr047"]
 [ext_resource type="PackedScene" uid="uid://dki11xovttedh" path="res://ui_general/ui_general.tscn" id="5_ychxt"]
 [ext_resource type="Script" path="res://ui_battle/skip.cs" id="6_e5nht"]
+[ext_resource type="Script" path="res://ui_battle/Skill2.cs" id="7_os2go"]
 
 [node name="BattleUi" type="Node2D"]
 script = ExtResource("1_g7cq3")
@@ -40,3 +41,12 @@ offset_right = 447.462
 offset_bottom = 173.296
 text = "SKip"
 script = ExtResource("6_e5nht")
+
+[node name="Buff" type="Button" parent="."]
+offset_left = -145.141
+offset_top = 152.999
+offset_right = -104.141
+offset_bottom = 183.999
+scale = Vector2(1.80952, 1.87501)
+text = "Buff"
+script = ExtResource("7_os2go")

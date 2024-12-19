@@ -6,6 +6,8 @@ public partial class gameplay : Node2D
 	private player _player;
 	private enemy1 _enemy;
 	private int turn_number =0;
+	private int buff_effect = 0;
+	private int buff = 1;
 	private bool _isPlayerTurn = true;
 	private Node _attackbutton;
 	public override void _Ready()
@@ -21,13 +23,21 @@ public partial class gameplay : Node2D
 	}
 	
 
-
+	public void PlayerBuff()
+	{
+	if (!_isPlayerTurn) return;
+	
+	buff = _player.TakeBuff(2);
+	buff_effect+=2;
+	CheckGameState(); 
+		
+	}
 	public void PlayerAttack()
 	{
 		if (!_isPlayerTurn) return; // Ensure player attacks only on their turn
 		
 		GD.Print("Player attacks!");
-		_enemy.TakeDamage(1); // Player attacks the enemy with 2 damage
+		_enemy.TakeDamage(1*buff); // Player attacks the enemy with 2 damage
 		
 		CheckGameState(); // Check if the game is over
 	}
@@ -35,7 +45,7 @@ public partial class gameplay : Node2D
 	{
 		if (!_isPlayerTurn) return; 
 		GD.Print("Player guards!");
-		_player.TakeGuard(1); 
+		_player.TakeGuard(1*buff); 
 		CheckGameState(); 
 	}
 	public void PlayerSkip()
@@ -53,7 +63,9 @@ public partial class gameplay : Node2D
 		
 		GD.Print("Enemy attacks!");
 		_player.TakeDamage(1); // Enemy attacks the player with 1 damage
-		_player.StatReset();
+		buff_effect-=1;
+		_player.StatReset(buff_effect);
+		buff_effect = Math.Max(buff_effect, 0); 
 		CheckGameState(); // Check if the game is over
 	}
 
@@ -77,7 +89,8 @@ public partial class gameplay : Node2D
 
 		
 		_isPlayerTurn = !_isPlayerTurn;
-		StartTurn(); 
+		StartTurn();
+		
 	}
 
 	private void StartTurn()
