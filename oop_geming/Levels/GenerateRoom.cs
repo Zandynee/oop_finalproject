@@ -21,7 +21,8 @@ public partial class GenerateRoom : Node {
 		switch (room.RoomType)
 		{
 	  	case Room.Type.FIGHT:
-	  	  GD.Print("Enemies: " + room.Enemies.Count);		
+	  	  GD.Print("Enemies: " + room.Enemies.Count);
+		
 	  	  break;
 	  	case Room.Type.STORE:
 	  	  GD.Print("Store Items: " + room.StoreItems.Count);
@@ -31,6 +32,10 @@ public partial class GenerateRoom : Node {
 	  	  break;
 		}
 	  }
+	Node parentNode = GetParent();
+	var gameState = parentNode.GetNode<GameState>("GameState");
+	gameState.Rooms = rooms;
+	
   }
 
   private RandomNumberGenerator random = new RandomNumberGenerator();
