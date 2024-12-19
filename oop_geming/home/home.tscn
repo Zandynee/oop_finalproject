@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5u1j6filn4mp"]
+[gd_scene load_steps=5 format=3 uid="uid://b5u1j6filn4mp"]
 
-[ext_resource type="Texture2D" uid="uid://3cki8sp6212e" path="res://icon.svg" id="1_l0xhu"]
+[ext_resource type="Texture2D" uid="uid://d3shoartj41i4" path="res://assets/Start Game.png" id="2_0c4ja"]
+[ext_resource type="Texture2D" uid="uid://csnkkrr8y5i5y" path="res://assets/Group 15.png" id="2_7md84"]
 [ext_resource type="Script" path="res://home/MenuButton.cs" id="2_pybjo"]
 
 [sub_resource type="CSharpScript" id="CSharpScript_2740n"]
@@ -25,21 +26,22 @@ public partial class Home : Node2D
 [node name="Node2D" type="Node2D"]
 script = SubResource("CSharpScript_2740n")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(3, -162)
-texture = ExtResource("1_l0xhu")
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="MenuButton" type="MenuButton" parent="Icon"]
+[node name="Group15" type="Sprite2D" parent="."]
+position = Vector2(-3.99999, -241)
+scale = Vector2(0.601042, 0.602309)
+texture = ExtResource("2_7md84")
+
+[node name="MenuButton" type="MenuButton" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -39.0422
-offset_top = 137.984
-offset_right = -107.042
-offset_bottom = 40.9844
+offset_left = -176.0
+offset_top = 32.0
+offset_right = 167.0
+offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "MENU"
+icon = ExtResource("2_0c4ja")
 script = ExtResource("2_pybjo")
-
-[node name="Camera2D" type="Camera2D" parent="."]

@@ -23,29 +23,29 @@ public partial class gameplay : Node2D
 	}
 	
 
-	public void PlayerBuff()
+	public void PlayerBuff(int amount)
 	{
 	if (!_isPlayerTurn) return;
 	
-	buff = _player.TakeBuff(2);
+	buff = _player.TakeBuff(amount);
 	buff_effect+=2;
 	CheckGameState(); 
 		
 	}
-	public void PlayerAttack()
+	public void PlayerAttack(int amount)
 	{
 		if (!_isPlayerTurn) return; // Ensure player attacks only on their turn
 		
 		GD.Print("Player attacks!");
-		_enemy.TakeDamage(1*buff); // Player attacks the enemy with 2 damage
+		_enemy.TakeDamage(amount*buff); // Player attacks the enemy with 2 damage
 		
 		CheckGameState(); // Check if the game is over
 	}
-	public void PlayerGuard()
+	public void PlayerGuard(int amount)
 	{
 		if (!_isPlayerTurn) return; 
 		GD.Print("Player guards!");
-		_player.TakeGuard(1*buff); 
+		_player.TakeGuard(amount*buff); 
 		CheckGameState(); 
 	}
 	public void PlayerSkip()

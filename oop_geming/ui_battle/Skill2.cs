@@ -18,7 +18,7 @@ public partial class Skill2 : Button
 	private void OnPressed()
 	{
 		
-		_gamebuff.PlayerBuff();
+		_gamebuff.PlayerBuff(2);
 	}
 
 	

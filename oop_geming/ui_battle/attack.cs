@@ -18,6 +18,6 @@ public partial class attack : Button
 	private void OnPressed()
 	{
 		// Call the PlayerAttack method on the gameplay instance
-		_gameattack.PlayerAttack();
+		_gameattack.PlayerAttack(1);
 	}
 }

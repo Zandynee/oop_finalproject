@@ -16,6 +16,6 @@ public partial class skill1 : Button
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	private void OnPressed()
 	{
-		_gamedefend.PlayerGuard();
+		_gamedefend.PlayerGuard(1);
 	}
 }

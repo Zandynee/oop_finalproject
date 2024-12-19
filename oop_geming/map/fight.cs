@@ -7,10 +7,8 @@ public partial class fight : Button
 	public override void _Ready()
 	{
 		
-	var button = new Button();
-   	button.Text = "Fight!";
-	button.Pressed += FightPressed;
-	AddChild(button);
+	this.Pressed += FightPressed;
+	
 	
 	}
 
