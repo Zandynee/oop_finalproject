@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 
 public class GameContext : DbContext{
-  public DbSet<Character> Characters { get; set; }
   public DbSet<Enemy> Enemies { get; set; }
+  public DbSet<Player> Players { get; set; }
 
   public GameContext(){
 	Database.EnsureCreated();

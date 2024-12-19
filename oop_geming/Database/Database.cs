@@ -16,34 +16,11 @@ public partial class Database : Control
 	{
 	}
 
-	// Backend Character
-	  public void addCharacter(Character character){
-	context.Characters.Add(character);
-	context.SaveChanges();
-  }
 
-  public void updateCharacter(Character character){
-	context.Characters.Update(character);
-	context.SaveChanges();
-  }
-
-  public void deleteCharacter(Character character){
-	context.Characters.Remove(character);
-	context.SaveChanges();
-  }
-
-  public Character getCharacter(int id){
-	return context.Characters.Find(id);
-  }
-
-  public Character getCharacter(string name){
-		var character = context.Characters.Where(c => c.Name == name).FirstOrDefault();
-	return context.Characters.Where(c => c.Name == name).FirstOrDefault();
-  }
-
-  public List<Character> getCharacters(){
-	return context.Characters.ToList();
-  }
+	// Enemy
+	public Enemy GetEnemy(int id){
+		return context.Enemies.Find(id);
+	}
 
 
 }
