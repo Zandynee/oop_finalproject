@@ -3,11 +3,11 @@ using System;
 
 public partial class room_left : Button
 {
-      private Room room;
+	  private Room room;
 
-      public override void _Ready()
-    {
-      // Access the GameState singleton
+	  public override void _Ready()
+	{
+	  // Access the GameState singleton
 		  Node parentNode = GetParent();
 		  var gameState = parentNode.GetNode<GameState>("GameState");
 		  // Retrieve the rooms and process them
@@ -16,33 +16,33 @@ public partial class room_left : Button
 		  	GD.Print("No rooms found in GameState.");
 		  	return;
 		  }
-      room = gameState.Rooms[0];
+	  room = gameState.Rooms[0];
 
-      this.Text = room.RoomType.ToString();
+	  this.Text = room.RoomType.ToString();
 
-      if (room.RoomType == Room.Type.FIGHT) {
-            GD.Print("Enemies: " + room.Enemies[0].Name);
-        gameState.loadedEnemy = room.Enemies[0];
-      }
+	  if (room.RoomType == Room.Type.FIGHT) {
+			GD.Print("Enemies: " + room.Enemies[0].Name);
+		gameState.loadedEnemy = room.Enemies[0];
+	  }
 
-      this.Pressed += RoomPressed;
+	  this.Pressed += RoomPressed;
 
-    }
+	}
 
-    public void RoomPressed()
-    {
-      switch (room.RoomType)
-      {
-        case Room.Type.FIGHT:
-          //TODO: Export enemies
-          GetTree().ChangeSceneToFile("res://ui_battle/battle_ui.tscn");
-          break;
-        case Room.Type.STORE:
-          GetTree().ChangeSceneToFile("res://ui_store/store_ui.tscn");
-          break;
-        case Room.Type.EVENT:
-          GetTree().ChangeSceneToFile("res://ui_event/event_ui.tscn");
-          break;
-      }
-    }
+	public void RoomPressed()
+	{
+	  switch (room.RoomType)
+	  {
+		case Room.Type.FIGHT:
+		  //TODO: Export enemies
+		  GetTree().ChangeSceneToFile("res://ui_battle/battle_ui.tscn");
+		  break;
+		case Room.Type.STORE:
+		  GetTree().ChangeSceneToFile("res://ui_store/store_ui.tscn");
+		  break;
+		case Room.Type.EVENT:
+		  GetTree().ChangeSceneToFile("res://ui_event/event_ui.tscn");
+		  break;
+	  }
+	}
 }
