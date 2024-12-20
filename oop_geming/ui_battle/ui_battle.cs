@@ -2,7 +2,7 @@
 using Godot;
 using System;
 
-public partial class battleui : Node
+public partial class ui_battle : Node
 {
 	
 	public override void _Ready()
