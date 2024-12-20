@@ -6,7 +6,7 @@ public partial class player : Node
 {
 	
 
-	public int MaxHp = 12;
+	public int MaxHp = Global.getHealth();
 	public int Defend = 0;
 	public int Buff = 1;
 	public int fights = 0;

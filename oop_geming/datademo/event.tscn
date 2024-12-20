@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpyljy7rmc6cr"]
+
+[ext_resource type="Texture2D" uid="uid://0lt2oym3ffav" path="res://assets/batuuu 1.png" id="1_ttu58"]
+
+[node name="Event" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-12, -161)
+
+[node name="Batuuu1" type="Sprite2D" parent="."]
+position = Vector2(-31, -223)
+scale = Vector2(0.652809, 1.03611)
+texture = ExtResource("1_ttu58")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -36.0
+offset_top = -134.0
+offset_right = 25.0
+offset_bottom = -103.0
+text = "button"

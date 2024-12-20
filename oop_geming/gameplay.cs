@@ -137,7 +137,7 @@ public partial class gameplay : Node2D
 		{
 			Global.ResetStage();
 			GD.Print("You lose!");
-			
+			Global.resetHealth();
 			GetTree().ChangeSceneToFile("res://home/home.tscn");
 			return;
 		}

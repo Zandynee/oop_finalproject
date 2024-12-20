@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://player/skillslot1.cs" id="1_5q4hs"]
 
 [node name="Skillslot1" type="Node2D"]
+visible = false
 script = ExtResource("1_5q4hs")
