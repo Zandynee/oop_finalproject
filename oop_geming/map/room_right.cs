@@ -18,6 +18,8 @@ public partial class room_right : Button
 		  }
       room = gameState.Rooms[2];
 
+      this.Text = room.RoomType.ToString();
+
       this.Pressed += RoomPressed;
 
     }

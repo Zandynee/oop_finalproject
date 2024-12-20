@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2j85s5bje4j8"]
+[gd_scene load_steps=8 format=3 uid="uid://c2j85s5bje4j8"]
 
 [ext_resource type="Script" path="res://Levels/GameState.cs" id="1_eggsw"]
 [ext_resource type="Script" path="res://Levels/GenerateRoom.cs" id="2_3fhjo"]
 [ext_resource type="Script" path="res://map/fight.cs" id="2_aiwtg"]
 [ext_resource type="PackedScene" uid="uid://dki11xovttedh" path="res://ui_general/ui_general.tscn" id="2_wdgso"]
+[ext_resource type="Script" path="res://map/room_left.cs" id="5_bylm7"]
+[ext_resource type="Script" path="res://map/room_centre.cs" id="6_shtqg"]
+[ext_resource type="Script" path="res://map/room_right.cs" id="7_4pvkk"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,3 +30,24 @@ script = ExtResource("2_aiwtg")
 
 [node name="ui_general" parent="." instance=ExtResource("2_wdgso")]
 position = Vector2(-1, 0)
+
+[node name="Button_left" type="Button" parent="."]
+offset_left = -399.0
+offset_top = -163.0
+offset_right = -243.0
+offset_bottom = 40.0
+script = ExtResource("5_bylm7")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = -68.0
+offset_top = -159.0
+offset_right = 81.0
+offset_bottom = 36.0
+script = ExtResource("6_shtqg")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 275.0
+offset_top = -143.0
+offset_right = 411.0
+offset_bottom = 42.0
+script = ExtResource("7_4pvkk")
