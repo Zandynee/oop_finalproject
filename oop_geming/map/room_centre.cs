@@ -39,7 +39,7 @@ public partial class room_centre : Button
 		  GetTree().ChangeSceneToFile("res://ui_store/store_ui.tscn");
 		  break;
 		case Room.Type.EVENT:
-		  GetTree().ChangeSceneToFile("res://ui_event/event_ui.tscn");
+		  GetTree().ChangeSceneToFile("res://datademo/event.tscn");
 		  break;
 	  }
 	}

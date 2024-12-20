@@ -9,6 +9,7 @@ public partial class player : Node
 	public int MaxHp = Global.getHealth();
 	public int Defend = 0;
 	public int Buff = 1;
+	public int Attack = 1;
 	public int fights = 0;
 
 	// Skilldex fields
@@ -18,13 +19,13 @@ public partial class player : Node
 	public string skilldex4;
 
 	// Example skill pool
-	private string[] skillPool = { "skl1", "skl2", "skl3" };
+	private string[] skillPool = { "skl1", "skl2", "skl3","skl4", "skl5" };
 
 	public skillslot1 _fetchskill1;
 	public skillslot2 _fetchskill2;
 	public skillslot3 _fetchskill3;
 	public skillslot4 _fetchskill4;
-	public int Hp { get; private set; }
+	public int Hp { get; set; }
 
 	public override void _Ready()
 	{

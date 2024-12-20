@@ -26,7 +26,7 @@ public partial class skillslot1 : Node
 	_idskill1 = GetParent<player>();
 		
 		path = "res://datademo/skill_"+_idskill1.SkillSlot1()+".tscn";
-		GD.Print("ooioiasdasdasdoooi");
+	
 		PackedScene sceneskill1 = ResourceLoader.Load<PackedScene>(path);
 		
 		
@@ -35,11 +35,11 @@ public partial class skillslot1 : Node
 
 		
 		root_name = instance.Name;
-		GD.Print(root_name);
+
 		Type instanceType = instance.GetType();
 		
 		skillname1 = instanceType.Name;
-		GD.Print(skillname1);
+
 
 // Dynamically call a method or access a property
 		MethodInfo methodReady = instanceType.GetMethod("_Ready");

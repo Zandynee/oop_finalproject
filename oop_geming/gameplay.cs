@@ -10,8 +10,8 @@ using System.Reflection;
 
 public partial class gameplay : Node2D
 {
-	private player _player;
-	private enemy1 _enemy;
+	public player _player;
+	public enemy1 _enemy;
 	private int turn_number =0;
 	private int buff_effect = 0;
 	private int buff = 1;
@@ -34,9 +34,11 @@ public partial class gameplay : Node2D
 		_player.MaxHp = Global.getHealth();
 		//Generate random enemy
 		Enemy loadedEnemy = GetRandomEnemy();
-		_enemy.MaxHp = loadedEnemy.Health;
+		_enemy.Hp = loadedEnemy.Health;
 		_enemy.Damage = loadedEnemy.Damage;
-
+		Global.EnemyName = loadedEnemy.Name;
+		GD.Print("Enemy Health: " + loadedEnemy.Health);
+		GD.Print("Enemy DAmage: " + loadedEnemy.Damage);
 		GD.Print("Enemy Health: " + _enemy.MaxHp);
 		GD.Print("Enemy Damage: " + _enemy.Damage);
 		
@@ -79,8 +81,8 @@ public partial class gameplay : Node2D
 	{
 		if (!_isPlayerTurn) return; // Ensure player attacks only on their turn
 		
-		GD.Print("Player attacks!");
-		_enemy.TakeDamage(amount*buff); // Player attacks the enemy with 2 damage
+		GD.Print($"Player attacks and dealt {amount} amount!");
+		_enemy.TakeDamage(amount*buff*Global.EventBuff); // Player attacks the enemy with 2 damage
 		
 		CheckGameState(); // Check if the game is over
 	}
@@ -95,6 +97,13 @@ public partial class gameplay : Node2D
 	{
 		if (!_isPlayerTurn) return; 
 		GD.Print("Skipped a turn..");
+		CheckGameState();
+	}
+	public void PlayerPoisoned()
+	{
+		if (!_isPlayerTurn) return; 
+		GD.Print("Player got poisoned!");
+		_player.TakeDamage(1);
 		CheckGameState();
 	}
 	
@@ -138,7 +147,7 @@ public partial class gameplay : Node2D
 			Global.ResetStage();
 			GD.Print("You lose!");
 			Global.resetHealth();
-			GetTree().ChangeSceneToFile("res://home/home.tscn");
+			GetTree().ChangeSceneToFile("res://ui_general/gameover.tscn");
 			return;
 		}
 

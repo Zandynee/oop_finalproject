@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3f7lornx5i8n"]
+[gd_scene load_steps=15 format=3 uid="uid://d3f7lornx5i8n"]
 
 [ext_resource type="Script" path="res://ui_battle/ui_battle.cs" id="1_g7cq3"]
 [ext_resource type="Texture2D" uid="uid://1b6q712n5anq" path="res://assets/Gameplay 2.png" id="2_eyg68"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://ui_battle/skillbutton4.cs" id="9_bopwy"]
 [ext_resource type="Script" path="res://enemy1/enemy_health.cs" id="10_mndj0"]
 [ext_resource type="Script" path="res://ui_battle/healthpoint.cs" id="10_ummvl"]
+[ext_resource type="Script" path="res://ui_battle/namenemy.cs" id="12_or3bj"]
 
 [node name="BattleUi" type="Node2D"]
 script = ExtResource("1_g7cq3")
@@ -77,6 +78,14 @@ offset_right = 490.0
 offset_bottom = 220.0
 text = "SKip"
 script = ExtResource("6_e5nht")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 379.0
+offset_top = -204.0
+offset_right = 439.0
+offset_bottom = -181.0
+text = "MUSUH"
+script = ExtResource("12_or3bj")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 366.0

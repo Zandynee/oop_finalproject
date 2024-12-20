@@ -13,6 +13,7 @@ public partial class menu : Button
 	public void ExitPressed()
 	{
 	GetTree().ChangeSceneToFile("res://home/home.tscn");
+	
 	}
 	
 }

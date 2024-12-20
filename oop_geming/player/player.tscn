@@ -1,18 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://s57glgyuga6i"]
 
-[ext_resource type="Texture2D" uid="uid://3cki8sp6212e" path="res://icon.svg" id="1_f7omb"]
 [ext_resource type="Script" path="res://datademo/player.cs" id="1_myk57"]
 [ext_resource type="PackedScene" uid="uid://xa8hknn6c2v1" path="res://player/skillslot1.tscn" id="3_phvha"]
 [ext_resource type="PackedScene" uid="uid://b6otmobaa57oy" path="res://player/skillslot2.tscn" id="4_6n05m"]
 [ext_resource type="PackedScene" uid="uid://cwfr4bvofgemd" path="res://player/skillslot3.tscn" id="5_g0s4s"]
+[ext_resource type="Texture2D" uid="uid://5cpwlpbnvovd" path="res://assets/samuraiii 1.png" id="6_b5tsv"]
 [ext_resource type="PackedScene" uid="uid://0m71r20p81s3" path="res://player/skillslot4.tscn" id="6_qoxwc"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_myk57")
-
-[node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(2.76, 0.457143)
-texture = ExtResource("1_f7omb")
 
 [node name="Skillslot1" parent="." instance=ExtResource("3_phvha")]
 
@@ -21,3 +17,8 @@ texture = ExtResource("1_f7omb")
 [node name="Skillslot3" parent="." instance=ExtResource("5_g0s4s")]
 
 [node name="Skillslot4" parent="." instance=ExtResource("6_qoxwc")]
+
+[node name="Samuraiii1" type="Sprite2D" parent="."]
+position = Vector2(-3, -5)
+scale = Vector2(0.705882, 0.708914)
+texture = ExtResource("6_b5tsv")

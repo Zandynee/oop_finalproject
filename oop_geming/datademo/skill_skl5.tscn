@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c18gn12pfr0c8"]
+
+[ext_resource type="Script" path="res://datademo/poison_skill.cs" id="1_cdf6h"]
+
+[node name="SkillSkl5" type="Node2D"]
+script = ExtResource("1_cdf6h")

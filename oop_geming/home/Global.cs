@@ -32,4 +32,8 @@ public partial class Global : Node
   public static void resetHealth(){
 	StartingHealth = HealthDeclare;
   }
+	public static string EnemyName = "Villain";
+	
+	public static int EventBuff = 1;
+	
 }
