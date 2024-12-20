@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj3juu37sgmbm"]
+
+[ext_resource type="Script" path="res://datademo/attack_skill.cs" id="1_340xe"]
+
+[node name="Skill_skl1" type="Node2D"]
+script = ExtResource("1_340xe")

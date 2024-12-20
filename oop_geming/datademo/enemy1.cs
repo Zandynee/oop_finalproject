@@ -17,6 +17,4 @@ public partial class enemy1 : Node
 		Hp = Math.Max(Hp,0);
 		
 	}
-
-
 }

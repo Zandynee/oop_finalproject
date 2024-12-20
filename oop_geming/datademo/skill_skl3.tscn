@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvcr0s2vcvncy"]
+
+[ext_resource type="Script" path="res://datademo/buff_skill.cs" id="1_nrp1i"]
+
+[node name="SkillSkl3" type="Node2D"]
+script = ExtResource("1_nrp1i")

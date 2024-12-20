@@ -10,6 +10,9 @@ public partial class gameplay : Node2D
 	private int buff = 1;
 	private bool _isPlayerTurn = true;
 	private Node _attackbutton;
+	public skillslot1 _fetchplayerskl1;
+	public skillslot2 _fetchplayerskl2;
+	public skillslot3 _fetchplayerskl3;
 	public override void _Ready()
 	{
 		Node parentnode = GetParent();
@@ -23,6 +26,21 @@ public partial class gameplay : Node2D
 	}
 	
 
+	public skillslot1 PlayerSlot1()
+	{
+		_fetchplayerskl1= _player.FetchSkillSlot1();
+		return _fetchplayerskl1;
+	}
+	public skillslot2 PlayerSlot2()
+	{
+		_fetchplayerskl2= _player.FetchSkillSlot2();
+		return _fetchplayerskl2;
+	}
+	public skillslot3 PlayerSlot3()
+	{
+		_fetchplayerskl3= _player.FetchSkillSlot3();
+		return _fetchplayerskl3;
+	}
 	public void PlayerBuff(int amount)
 	{
 	if (!_isPlayerTurn) return;

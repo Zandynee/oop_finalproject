@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://xa8hknn6c2v1"]
+
+[ext_resource type="Script" path="res://player/skillslot1.cs" id="1_5q4hs"]
+
+[node name="Skillslot1" type="Node2D"]
+script = ExtResource("1_5q4hs")

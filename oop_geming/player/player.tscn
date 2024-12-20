@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://s57glgyuga6i"]
+[gd_scene load_steps=7 format=3 uid="uid://s57glgyuga6i"]
 
 [ext_resource type="Texture2D" uid="uid://3cki8sp6212e" path="res://icon.svg" id="1_f7omb"]
 [ext_resource type="Script" path="res://datademo/player.cs" id="1_myk57"]
+[ext_resource type="PackedScene" uid="uid://xa8hknn6c2v1" path="res://player/skillslot1.tscn" id="3_phvha"]
+[ext_resource type="PackedScene" uid="uid://b6otmobaa57oy" path="res://player/skillslot2.tscn" id="4_6n05m"]
+[ext_resource type="PackedScene" uid="uid://cwfr4bvofgemd" path="res://player/skillslot3.tscn" id="5_g0s4s"]
+[ext_resource type="PackedScene" uid="uid://0m71r20p81s3" path="res://player/skillslot4.tscn" id="6_qoxwc"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_myk57")
@@ -9,3 +13,11 @@ script = ExtResource("1_myk57")
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(2.76, 0.457143)
 texture = ExtResource("1_f7omb")
+
+[node name="Skillslot1" parent="." instance=ExtResource("3_phvha")]
+
+[node name="Skillslot2" parent="." instance=ExtResource("4_6n05m")]
+
+[node name="Skillslot3" parent="." instance=ExtResource("5_g0s4s")]
+
+[node name="Skillslot4" parent="." instance=ExtResource("6_qoxwc")]
