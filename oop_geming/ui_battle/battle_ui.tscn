@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3f7lornx5i8n"]
+[gd_scene load_steps=13 format=3 uid="uid://d3f7lornx5i8n"]
 
 [ext_resource type="Script" path="res://ui_battle/ui_battle.cs" id="1_g7cq3"]
 [ext_resource type="PackedScene" uid="uid://dtjn3hqunsiv0" path="res://gameplay.tscn" id="2_jrcvw"]
@@ -9,6 +9,9 @@
 [ext_resource type="Script" path="res://ui_battle/skillbutton1.cs" id="6_lr3oo"]
 [ext_resource type="Script" path="res://ui_battle/skillbutton2.cs" id="7_b5tr5"]
 [ext_resource type="Script" path="res://ui_battle/skillbutton3.cs" id="8_so1o3"]
+[ext_resource type="Script" path="res://ui_battle/skillbutton4.cs" id="9_bopwy"]
+[ext_resource type="Script" path="res://enemy1/enemy_health.cs" id="10_mndj0"]
+[ext_resource type="Script" path="res://ui_battle/healthpoint.cs" id="10_ummvl"]
 
 [node name="BattleUi" type="Node2D"]
 script = ExtResource("1_g7cq3")
@@ -59,6 +62,7 @@ offset_top = 202.0
 offset_right = 147.0
 offset_bottom = 260.0
 text = "Skill4"
+script = ExtResource("9_bopwy")
 
 [node name="Skip" type="Button" parent="."]
 offset_left = 399.0
@@ -67,3 +71,17 @@ offset_right = 490.0
 offset_bottom = 220.0
 text = "SKip"
 script = ExtResource("6_e5nht")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 366.0
+offset_top = -47.0
+offset_right = 406.0
+offset_bottom = -24.0
+script = ExtResource("10_mndj0")
+
+[node name="player_health" type="Label" parent="."]
+offset_left = -491.0
+offset_top = 148.0
+offset_right = -423.0
+offset_bottom = 171.0
+script = ExtResource("10_ummvl")

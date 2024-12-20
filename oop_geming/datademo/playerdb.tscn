@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb6rhnp4l4kf4"]
+
+[ext_resource type="Script" path="res://datademo/player_db.cs" id="1_85ray"]
+
+[node name="Playerdb" type="Node2D"]
+script = ExtResource("1_85ray")

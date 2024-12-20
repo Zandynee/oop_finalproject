@@ -1,9 +1,13 @@
 using Godot;
 using System;
+<<<<<<< Updated upstream
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
+=======
+using System.Reflection;
+>>>>>>> Stashed changes
 public partial class gameplay : Node2D
 {
 	private player _player;
@@ -13,9 +17,12 @@ public partial class gameplay : Node2D
 	private int buff = 1;
 	private bool _isPlayerTurn = true;
 	private Node _attackbutton;
+	public int health_player;
+	public int health_enemy;
 	public skillslot1 _fetchplayerskl1;
 	public skillslot2 _fetchplayerskl2;
 	public skillslot3 _fetchplayerskl3;
+	public skillslot4 _fetchplayerskl4;
 	public override void _Ready()
 	{
 		Node parentnode = GetParent();
@@ -52,6 +59,11 @@ public partial class gameplay : Node2D
 	{
 		_fetchplayerskl3= _player.FetchSkillSlot3();
 		return _fetchplayerskl3;
+	}
+	public skillslot4 PlayerSlot4()
+	{
+		_fetchplayerskl4= _player.FetchSkillSlot4();
+		return _fetchplayerskl4;
 	}
 	public void PlayerBuff(int amount)
 	{
@@ -105,14 +117,17 @@ public partial class gameplay : Node2D
 		// Check if either the player or the enemy is dead
 		if (_enemy.Hp <= 0)
 		{
+			
 			GD.Print("You win!");
 			GetTree().ChangeSceneToFile("res://map/map.tscn");
+			
 			return;
 		}
 
 		if (_player.Hp <= 0)
 		{
 			GD.Print("You lose!");
+			
 			GetTree().ChangeSceneToFile("res://home/home.tscn");
 			return;
 		}
@@ -128,6 +143,9 @@ public partial class gameplay : Node2D
 		// Trigger the attack for the current turn
 		if (_isPlayerTurn)
 		{
+			health_player = _player.Hp;
+			health_enemy = _enemy.Hp;
+			
 			turn_number++;
 			GD.Print("Turn Number:", turn_number);
 			GD.Print("Your Health:", _player.Hp);

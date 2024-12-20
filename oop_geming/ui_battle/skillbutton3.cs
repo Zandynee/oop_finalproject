@@ -17,7 +17,7 @@ public partial class skillbutton3 : Button
 	private void OnPressed()
 	{
 		
-
+		this.Text = _skillrun3.skillname3;
 		_skillrun3.RunSkill3();
 		
 	}

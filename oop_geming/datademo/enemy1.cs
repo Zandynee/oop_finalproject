@@ -4,6 +4,7 @@ using System;
 public partial class enemy1 : Node
 {
 	[Export] public int MaxHp = 4;
+<<<<<<< Updated upstream
 	[Export] public int Damage = 1;
 	[Export] public string enemyName = "Enemy";
 	public int Hp { get; private set; }
