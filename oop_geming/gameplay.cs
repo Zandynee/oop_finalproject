@@ -1,5 +1,8 @@
 using Godot;
 using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 public partial class gameplay : Node2D
 {
@@ -20,6 +23,15 @@ public partial class gameplay : Node2D
 		// Initialize player and enemy nodes
 		_player = GetNode<player>("Player"); // Adjust path as needed
 		_enemy = GetNode<enemy1>("Enemy1");   // Adjust path as needed
+
+		//Generate random enemy
+		Enemy loadedEnemy = GetRandomEnemy();
+		_enemy.MaxHp = loadedEnemy.Health;
+		_enemy.Damage = loadedEnemy.Damage;
+
+		GD.Print("Enemy Health: " + _enemy.MaxHp);
+		GD.Print("Enemy Damage: " + _enemy.Damage);
+		
 		
 		
 		StartTurn();
@@ -80,7 +92,7 @@ public partial class gameplay : Node2D
 		if (_isPlayerTurn) return; // Ensure the enemy attacks only on their turn
 		
 		GD.Print("Enemy attacks!");
-		_player.TakeDamage(1); // Enemy attacks the player with 1 damage
+		_player.TakeDamage(_enemy.Damage); // Enemy attacks the player with 1 damage
 		buff_effect-=1;
 		_player.StatReset(buff_effect);
 		buff_effect = Math.Max(buff_effect, 0); 
@@ -126,4 +138,15 @@ public partial class gameplay : Node2D
 			EnemyTurn();
 		}
 	}
+
+	private Random _random = new Random();
+
+	public Enemy GetRandomEnemy(){
+			using (var context = new GameContext())
+			{
+				var enemies = context.Enemies.ToList();
+				var randomIndex = _random.Next(0, enemies.Count);
+				return enemies[randomIndex];
+			}
+		}
 }

@@ -38,14 +38,14 @@ offset_right = -243.0
 offset_bottom = 40.0
 script = ExtResource("5_bylm7")
 
-[node name="Button3" type="Button" parent="."]
+[node name="button_center" type="Button" parent="."]
 offset_left = -68.0
 offset_top = -159.0
 offset_right = 81.0
 offset_bottom = 36.0
 script = ExtResource("6_shtqg")
 
-[node name="Button2" type="Button" parent="."]
+[node name="button_right" type="Button" parent="."]
 offset_left = 275.0
 offset_top = -143.0
 offset_right = 411.0

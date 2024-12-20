@@ -18,6 +18,11 @@ public partial class room_centre : Button
 	  room = gameState.Rooms[1];
 
 	  this.Text = room.RoomType.ToString();
+
+	  if (room.RoomType == Room.Type.FIGHT) {
+		  GD.Print("Enemies: " + room.Enemies[0].Name);
+		  gameState.loadedEnemy = room.Enemies[0];
+	  }
 	  this.Pressed += RoomPressed;
 
 	}

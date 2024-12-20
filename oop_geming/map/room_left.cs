@@ -20,6 +20,11 @@ public partial class room_left : Button
 
       this.Text = room.RoomType.ToString();
 
+      if (room.RoomType == Room.Type.FIGHT) {
+            GD.Print("Enemies: " + room.Enemies[0].Name);
+        gameState.loadedEnemy = room.Enemies[0];
+      }
+
       this.Pressed += RoomPressed;
 
     }
