@@ -121,40 +121,60 @@ public partial class gameplay : Node2D
 		CheckGameState(); // Check if the game is over
 	}
 
-	private void CheckGameState()
+private void CheckGameState()
+{
+	if (IsEnemyDefeated())
 	{
-		
-		// Check if either the player or the enemy is dead
-		if (_enemy.Hp <= 0)
-		{
-			Global.IncrementStage();
-			GD.Print("Stage: ", Global.getStage());
-
-
-			GD.Print("You win!");
-
-			GD.Print("Your Health:", _player.Hp);
-			Global.updateHealth(_player.Hp);
-			
-
-			GetTree().ChangeSceneToFile("res://map/map.tscn");
-			
-			return;
-		}
-
-		if (_player.Hp <= 0)
-		{
-			GD.Print("You lose!");
-			
-			GetTree().ChangeSceneToFile("res://ui_general/gameover.tscn");
-			return;
-		}
-
-		
-		_isPlayerTurn = !_isPlayerTurn;
-		StartTurn();
-		
+		HandleVictory();
+		return;
 	}
+
+	if (IsPlayerDefeated())
+	{
+		HandleDefeat();
+		return;
+	}
+
+	TogglePlayerTurn();
+	StartTurn();
+}
+
+private bool IsEnemyDefeated()
+{
+	return _enemy.Hp <= 0;
+}
+
+private bool IsPlayerDefeated()
+{
+	return _player.Hp <= 0;
+}
+
+private void HandleVictory()
+{
+	Global.IncrementStage();
+	GD.Print($"Stage: {Global.getStage()}");
+	GD.Print("You win!");
+	GD.Print($"Your Health: {_player.Hp}");
+	Global.updateHealth(_player.Hp);
+	LoadScene("res://map/map.tscn");
+}
+
+private void HandleDefeat()
+{
+	GD.Print("You lose!");
+	LoadScene("res://ui_general/gameover.tscn");
+}
+
+private void TogglePlayerTurn()
+{
+	_isPlayerTurn = !_isPlayerTurn;
+}
+
+private void LoadScene(string scenePath)
+{
+	GetTree().ChangeSceneToFile(scenePath);
+}
+
 
 	private void StartTurn()
 	{
