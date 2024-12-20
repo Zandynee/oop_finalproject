@@ -144,9 +144,8 @@ public partial class gameplay : Node2D
 
 		if (_player.Hp <= 0)
 		{
-			Global.ResetStage();
 			GD.Print("You lose!");
-			Global.resetHealth();
+			
 			GetTree().ChangeSceneToFile("res://ui_general/gameover.tscn");
 			return;
 		}

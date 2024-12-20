@@ -14,6 +14,6 @@ public partial class healthpoint : Label
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Text = $"{_healthcek.health_player}";
+		Text = $"Health point : {_healthcek.health_player}";
 	}
 }

@@ -10,8 +10,8 @@
 position = Vector2(-12, -161)
 
 [node name="Batuuu1" type="Sprite2D" parent="."]
-position = Vector2(-46, -285)
-scale = Vector2(0.652809, 1.03611)
+position = Vector2(-32.5, -285)
+scale = Vector2(0.667978, 1.03611)
 texture = ExtResource("1_ttu58")
 
 [node name="Button" type="Button" parent="."]
@@ -29,3 +29,24 @@ offset_right = 193.0
 offset_bottom = -95.0
 text = "Damage"
 script = ExtResource("3_mpr16")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -184.0
+offset_top = -350.0
+offset_right = 213.0
+offset_bottom = -169.0
+tooltip_text = "aijfijef"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.287
+anchor_right = 0.04
+anchor_bottom = 0.287
+offset_left = 0.119999
+offset_top = 0.0530014
+offset_right = 402.12
+offset_bottom = 190.053
+text = "Event
+Choose a buff"

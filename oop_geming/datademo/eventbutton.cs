@@ -8,16 +8,12 @@ public partial class eventbutton : Button
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
 		Node parentnode = GetParent();
 		_healbuff = parentnode.GetNode<player>("Player");
-		
-		
 		this.Pressed += OnPressed;
 	}
 	private void OnPressed()
 	{
-		
 		var _hp = Global.getHealth();
 		_hp *= 5;
 		Global.updateHealth(_hp);
