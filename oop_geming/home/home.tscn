@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://csnkkrr8y5i5y" path="res://assets/Group 15.png" id="2_7md84"]
 [ext_resource type="Script" path="res://home/MenuButton.cs" id="2_pybjo"]
 [ext_resource type="Script" path="res://home/quitbutton.cs" id="4_g11e2"]
-[ext_resource type="PackedScene" uid="uid://bb6rhnp4l4kf4" path="res://datademo/playerdb.tscn" id="5_ttosp"]
+[ext_resource type="PackedScene" uid="uid://dhqtw7wl6i68e" path="res://datademo/playerdb.tscn" id="5_ttosp"]
 
 [sub_resource type="CSharpScript" id="CSharpScript_2740n"]
 script/source = "using Godot;

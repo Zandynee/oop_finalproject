@@ -1,13 +1,13 @@
 using Godot;
 using System;
-<<<<<<< Updated upstream
+
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-=======
+
 using System.Reflection;
->>>>>>> Stashed changes
+
 public partial class gameplay : Node2D
 {
 	private player _player;

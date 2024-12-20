@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://map/room_centre.cs" id="6_shtqg"]
 [ext_resource type="Script" path="res://map/room_right.cs" id="7_4pvkk"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="GameState" type="Node" parent="."]
 script = ExtResource("1_eggsw")
