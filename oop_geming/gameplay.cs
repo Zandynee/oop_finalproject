@@ -24,6 +24,7 @@ public partial class gameplay : Node2D
 		_player = GetNode<player>("Player"); // Adjust path as needed
 		_enemy = GetNode<enemy1>("Enemy1");   // Adjust path as needed
 
+		_player.MaxHp = Global.getHealth();
 		//Generate random enemy
 		Enemy loadedEnemy = GetRandomEnemy();
 		_enemy.MaxHp = loadedEnemy.Health;
@@ -105,13 +106,23 @@ public partial class gameplay : Node2D
 		// Check if either the player or the enemy is dead
 		if (_enemy.Hp <= 0)
 		{
+			Global.IncrementStage();
+			GD.Print("Stage: ", Global.getStage());
+
+
 			GD.Print("You win!");
+
+			GD.Print("Your Health:", _player.Hp);
+			Global.updateHealth(_player.Hp);
+			
+
 			GetTree().ChangeSceneToFile("res://map/map.tscn");
 			return;
 		}
 
 		if (_player.Hp <= 0)
 		{
+			Global.ResetStage();
 			GD.Print("You lose!");
 			GetTree().ChangeSceneToFile("res://home/home.tscn");
 			return;
