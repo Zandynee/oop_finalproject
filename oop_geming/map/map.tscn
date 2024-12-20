@@ -1,9 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2j85s5bje4j8"]
+[gd_scene load_steps=5 format=3 uid="uid://c2j85s5bje4j8"]
 
+[ext_resource type="Script" path="res://Levels/GameState.cs" id="1_eggsw"]
+[ext_resource type="Script" path="res://Levels/GenerateRoom.cs" id="2_3fhjo"]
 [ext_resource type="Script" path="res://map/fight.cs" id="2_aiwtg"]
 [ext_resource type="PackedScene" uid="uid://dki11xovttedh" path="res://ui_general/ui_general.tscn" id="2_wdgso"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="GameState" type="Node" parent="."]
+script = ExtResource("1_eggsw")
+
+[node name="RoomGenerator" type="Node" parent="."]
+script = ExtResource("2_3fhjo")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
