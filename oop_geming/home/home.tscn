@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5u1j6filn4mp"]
+[gd_scene load_steps=9 format=3 uid="uid://b5u1j6filn4mp"]
 
+[ext_resource type="PackedScene" uid="uid://bxxetd4lfq7dh" path="res://TestScene/test_scene.tscn" id="1_ds6s4"]
 [ext_resource type="Texture2D" uid="uid://d3shoartj41i4" path="res://assets/Start Game.png" id="2_0c4ja"]
 [ext_resource type="Texture2D" uid="uid://csnkkrr8y5i5y" path="res://assets/Group 15.png" id="2_7md84"]
 [ext_resource type="Script" path="res://home/MenuButton.cs" id="2_pybjo"]
@@ -28,6 +29,8 @@ public partial class Home : Node2D
 
 [node name="Node2D" type="Node2D"]
 script = SubResource("CSharpScript_2740n")
+
+[node name="TestScene" parent="." instance=ExtResource("1_ds6s4")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
