@@ -19,7 +19,7 @@ public partial class player : Node
 	public string skilldex4;
 
 	// Example skill pool
-	private string[] skillPool = { "skl1", "skl2", "skl3","skl4", "skl5" };
+	private string[] skillPool = { "skl1", "skl2", "skl3","skl4", "skl5", "skl6", "skl7", "skl8", "skl9" };
 
 	public skillslot1 _fetchskill1;
 	public skillslot2 _fetchskill2;

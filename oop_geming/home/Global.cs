@@ -4,7 +4,7 @@ using System.Net.NetworkInformation;
 
 public partial class Global : Node
 {
-  private static int HealthDeclare = 20;
+  private static int HealthDeclare = 40;
   public static int Stage = 0;
 
   public static void IncrementStage(){

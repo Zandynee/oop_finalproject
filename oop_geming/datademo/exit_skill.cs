@@ -11,7 +11,7 @@ public partial class exit_skill : Node
 	}
 	public void RunSkill()
 	{
-		
+		GetTree().ChangeSceneToFile("res://datademo/lol.tscn");
 		GetTree().Quit();
 	}
 

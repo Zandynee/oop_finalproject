@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c204kbbdrtv0h"]
+
+[ext_resource type="Script" path="res://datademo/wait_skill.cs" id="1_5o1hw"]
+
+[node name="SkillSkl8" type="Node2D"]
+script = ExtResource("1_5o1hw")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx27b76oogh4b"]
+
+[ext_resource type="Script" path="res://datademo/escape_skill.cs" id="1_cpdhj"]
+
+[node name="SkillSkl9" type="Node2D"]
+script = ExtResource("1_cpdhj")

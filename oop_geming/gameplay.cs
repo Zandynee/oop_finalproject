@@ -103,7 +103,16 @@ public partial class gameplay : Node2D
 	{
 		if (!_isPlayerTurn) return; 
 		GD.Print("Player got poisoned!");
-		_player.TakeDamage(1);
+		_player.TakeDamage(5);
+		CheckGameState();
+	}
+	public void PlayerHealed()
+	{
+		if (!_isPlayerTurn) return; 
+		GD.Print("Player got healed??");
+		var _hp = Global.getHealth();
+		_hp *= 2;
+		Global.updateHealth(_hp);
 		CheckGameState();
 	}
 	
@@ -121,7 +130,7 @@ public partial class gameplay : Node2D
 		CheckGameState(); // Check if the game is over
 	}
 
-private void CheckGameState()
+	private void CheckGameState()
 {
 	if (IsEnemyDefeated())
 	{
@@ -174,7 +183,6 @@ private void LoadScene(string scenePath)
 {
 	GetTree().ChangeSceneToFile(scenePath);
 }
-
 
 	private void StartTurn()
 	{

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cog3uluvwiw1j"]
+
+[ext_resource type="Texture2D" uid="uid://eycrjyo3anco" path="res://assets/Screenshot 2024-12-20 223717.png" id="1_6mohw"]
+
+[node name="Lol" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Screenshot2024-12-20223717" type="Sprite2D" parent="."]
+position = Vector2(-8, -15)
+texture = ExtResource("1_6mohw")
