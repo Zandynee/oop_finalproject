@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 public class GameContext : DbContext{
   public DbSet<Enemy> Enemies { get; set; }
   public DbSet<Player> Players { get; set; }
+  public DbSet<Leaderboard> Leaderboards { get; set; }
 
   public GameContext(){
 	Database.EnsureCreated();

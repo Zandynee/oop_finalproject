@@ -39,4 +39,3 @@ public partial class room_right : Button
       }
     }
 }
-
